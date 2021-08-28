@@ -17,7 +17,7 @@ function World({values}) {
     <p dangerouslySetInnerHTML={createMarkup(description)} />
 
   const openPost = (id) => {
-    history.push(`/World/${id}`)
+    history.push(`/world/${id}`)
   }
   const renderPost = (post, index) => {
     const { title, image, description, id } = post;

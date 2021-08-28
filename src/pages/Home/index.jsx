@@ -13,7 +13,7 @@ function Home() {
     setLoading(false);
     setNews({
       world: articles[0]?.value.value,
-      tech: articles[1]?.value.value,
+      technology: articles[1]?.value.value,
       economy: articles[2]?.value.value,
     });
   };
@@ -22,7 +22,7 @@ function Home() {
     setLoading(true);
     Promise.allSettled([
       api.getNews("world"),
-      api.getNews("tech"),
+      api.getNews("technology"),
       api.getNews("economy"),
     ]).then(handleNews);
   }, []);
@@ -45,7 +45,7 @@ function Home() {
       <Row gutter={[16, 16]}>
         <Col span={24}>
           <h2>Technology</h2>
-          <Technology values={news?.tech} />
+          <Technology values={news?.technology} />
         </Col>
       </Row>
     </div>

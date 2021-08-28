@@ -17,7 +17,7 @@ function Technology({values}) {
     <p dangerouslySetInnerHTML={createMarkup(description)} />
 
   const openPost = (id) => {
-    history.push(`/Technology/${id}`)
+    history.push(`/technology/${id}`)
   }
   const renderPost = (post, index) => {
     const { title, image, description, id } = post;

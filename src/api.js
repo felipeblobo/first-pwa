@@ -4,7 +4,7 @@ const params = {
     "Content-type": "application/json"
   }
 }
-const URL = "http://localhost:3333/api";
+const URL = "https://stormy-brook-79548.herokuapp.com/api";
 
 function getNews(subject) {
   return fetch(`${URL}/${subject}`, params)

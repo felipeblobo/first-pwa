@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
+import Post from './pages/Post';
 
 function App() {
   return (
@@ -8,8 +9,11 @@ function App() {
       <section>
         <BrowserRouter>
           <Switch>
-            <Route path="/">
+            <Route path="/" exact>
               <Home />
+            </Route>
+              <Route path="/:subject/:id">
+              <Post />
             </Route>
           </Switch>
         </BrowserRouter>
